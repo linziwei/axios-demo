@@ -30,6 +30,7 @@ axios.interceptors.response.use(
             switch (error.response.status) {
                 case 401:
                     store.commit(types.LOGOUT)
+                    // this.$store.dispatch('logout')
                     router.currentRoute.path !== 'login' &&
                         router.replace({
                             path: 'login',

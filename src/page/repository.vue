@@ -44,6 +44,7 @@
 
 import api from '../constant/api'
 import * as types from '../store/types'
+import {mapActions} from 'vuex'
 export default {
     name: 'test',
     data () {
@@ -54,9 +55,14 @@ export default {
     },
     mounted () {
         this.$store.commit(types.TITLE, 'your repositories')
+        // this.$store.dispatch('setTitle', 'your repositories')
+        // this.setTitle('your repositories')
         this.getRepository()
     },
     methods: {
+        // ...mapActions([
+        //     'setTitle'
+        // ]),
         getRepository () {
             let params = {
                 sort: 'updated'

@@ -22,5 +22,16 @@ export default new Vuex.Store({
         [types.TITLE]: (state, data) => {
             state.title = data
         }
-    }
+    },
+    // actions: {
+    //     login ({commit}, data) {
+    //         commit(types.LOGIN, data)
+    //     },
+    //     logout ({commit}) {
+    //         commit(types.LOGOUT)
+    //     },
+    //     setTitle ({commit}, data) {
+    //         commit(types.TITLE, data)
+    //     }
+    // }
 })
